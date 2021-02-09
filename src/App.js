@@ -51,12 +51,16 @@ class App extends React.Component {
     });
   };
 
+  addTask = (toDoName) => {
+    //logic to add an item to toDoList state
+  }
+
   render() {
     return (
       <div className="App">
         <div className="header">
           <h1>ToDo List:</h1>
-          <ToDoForm />
+          <ToDoForm addTask={this.addTask}/>
         </div>
         <ToDoList toDos={this.state.toDos} crossOff={this.state.crossOff} />
       </div>
